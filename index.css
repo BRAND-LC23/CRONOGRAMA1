@@ -1,0 +1,94 @@
+:root {
+    --COLOR1: rgb(4, 15, 82);
+    --COLOR2: white;
+    --COLOR3: black;
+    --COLOR4: goldenrod;
+}
+
+body {
+    background: linear-gradient(var(--COLOR3),75%,var(--COLOR1));
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: var(--COLOR1);
+    font-size: small;
+    background-repeat: no-repeat;
+    background-color: var(--COLOR1);
+}
+
+#BODYCONTENT {margin-top: 10%;}
+.TITLE {display: flex; justify-self: right; margin: 50px;}
+    .IMG1 {width: 10%; position: absolute; justify-self: left; left: 6%; top: 3vw;}
+    .CLOCKBOX {position: absolute; left: 88%;}
+    #CLOCK {font-size: 100%; font-style: oblique; font-weight: bold; color: var(--COLOR2);}
+
+#SEC-INPUT {margin: 1% 0%;}
+    .INPUT {width: 170px; height: 20px;}
+    #INPUT3 {width: 7.1%;}
+    #INPUT4 {background: transparent; color: var(--COLOR2); width: 6%; border: 2px solid var(--COLOR2);}
+    #INPUT6 {width: 2%}
+    #INPUT8 {width: 6.5%}
+    #INPUT9 {width: 5%;}
+    #SUBMIT {
+        background: green;
+        border: 2px solid lightgreen;
+        border-bottom-color: rgb(5, 43, 5);
+        border-right-color: rgb(5, 43, 5);
+        
+
+        color: var(--COLOR2);
+        font-weight: bolder;
+        font-style: oblique;
+    }
+    #LEYEND {display: flex; justify-content: center;}
+        .LEYEND-SYMBOL {font-weight: 900;}
+        .LEYEND-P {padding: 0% 2% 0.5% 0%; font-weight: 900; font-style: oblique;}
+        
+        #LEYEND-SYMBOL1 {color: green;}
+        #LEYEND-SYMBOL2 {color: yellow;}
+        #LEYEND-SYMBOL3 {color: red;}
+#TITLE1 {
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    top: 30px;
+    width: 50%;
+    color: var(--COLOR4);
+    text-align: center;
+    font-style: oblique;
+    font-family: 'Times New Roman';
+    font-size: 1.5vw;
+    line-height: 150%;
+    @media (max-width: 700px) {display: none;}
+}
+#TITLE2 {
+    display: flex;
+    justify-self: center;
+    color: var(--COLOR4);
+    margin: 0%;
+}
+.FILTER2 {
+    justify-content: center;
+    color: var(--COLOR2);
+    font-weight: 500;
+    padding: 1% 0%;
+}
+
+.OVERFLOW {overflow: auto;}
+table {color: var(--COLOR2); border: 0px solid var(--COLOR4); border-width: 2px 0px;}
+    #TABLE1-TH {background: linear-gradient(to right,var(--COLOR3),var(--COLOR1));}
+    th {font-size: large; width: 13.5vw; height: 20px;}
+    td {
+    border: 0px solid var(--COLOR4);
+    border-width: 2px 0px;
+    padding: 4px 0px;
+    height: 20px;
+    
+    font-size: large;
+    font-weight: bolder;
+    }
+
+#REF {width: 5%;}
+#FECHAe {width: 8%;}
+#FECHAs {width: 8%;}
+#DESCRIPCION {width: 32%;}
+#MARCA {width: 5%;}

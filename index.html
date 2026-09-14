@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRONOGRAMA</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body id="BODY">
+    <section class="TITLE">
+        <img src="stamp1.svg" alt="LCLOGO" class="IMG1">
+        <section class="CLOCKBOX">
+            <div id="CLOCK"></div>
+        </section>
+    </section>
+    <h1 id="TITLE1"></h1>
+    <section id="BODYCONTENT">
+        <h1 id="TITLE2">TABLA DE CONTENIDO</h1>
+        <form id="SEC-INPUT">
+            <section class="FILTER2" id="FILTER2">
+                <input type="radio" name="FILTER2-INPUT" id="FILTERA">
+                <label for="FILTERA" class="FILTER2-LABEL">ARREGLOS</label>
+                <input type="radio" name="FILTER2-INPUT" id="FILTERB">
+                <label for="FILTERB" class="FILTER2-LABEL">CORTES</label>
+                <input type="radio" name="FILTER2-INPUT" id="FILTERC">
+                <label for="FILTERC" class="FILTER2-LABEL">OTRO</label>
+            </section>
+
+            <input type="text" class="INPUT" id="INPUT1" placeholder="CLIENTE">
+            <input type="text" class="INPUT" id="INPUT7"  placeholder="TELÉFONO">
+            <input type="text" class="INPUT" id="INPUT2"  placeholder="DESCRIPCIÓN">
+            <input type="text" class="INPUT" id="INPUT8" list="INPUT8-LIST" placeholder="TIPO">
+            <datalist id="INPUT8-LIST">
+                <option value="ARREGLO"></option>
+                <option value="CORTE"></option>
+                <option value="OTRO"></option>
+            </datalist>
+            <input type="text" class="INPUT" id="INPUT6"  placeholder="REF" style="display: none;">
+            <input type="date" class="INPUT" id="INPUT3" placeholder="FECHA S.">
+            <input type="text" class="INPUT" id="INPUT5" list="INPUT5-LIST" placeholder="USUARIO">
+            <datalist id="INPUT5-LIST">
+                <option value="LENY"></option>
+                <option value="AMBAR"></option>
+                <option value="BRANDON"></option>
+                <option value="BRANDERSON"></option>
+            </datalist>
+            <input type="text" class="INPUT" id="INPUT9" placeholder="CUENTA">
+            <button onclick="TD_ADD()" id="SUBMIT">AÑADIR</button>
+            <input type="checkbox" name="" id="FILTER">
+        </form>
+        <section id="LEYEND">
+            <div class="LEYEND-SYMBOL" id="LEYEND-SYMBOL1">▉:</div><div class="LEYEND-P" id="LEYEND-SYMBOL1">PARA MAÑANA</div>
+            <div class="LEYEND-SYMBOL" id="LEYEND-SYMBOL2">▉:</div><div class="LEYEND-P" id="LEYEND-SYMBOL2">PARA HOY</div>
+            <div class="LEYEND-SYMBOL" id="LEYEND-SYMBOL3">▉:</div><div class="LEYEND-P" id="LEYEND-SYMBOL3">PARA AYER</div>
+        </section>
+        <div class="OVERFLOW">
+            <table id="TABLE1">
+                <thead id="THEAD1">
+                    <tr id="TABLE1-TH"></tr>
+                </thead>
+                <tbody id="TBODY1"></tbody>
+            </table>
+        </div>
+    </section>
+</body>
+    <script src="index.js"></script>
+</html>
+
