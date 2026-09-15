@@ -187,7 +187,6 @@ function LOCALLOAD() {
         //TRELEM: Los items que se encuentren en el conjunto.
         let TRELEM = TRINFO[TR_NEW.id];
         TBODY1.appendChild(TR_NEW);
-
         //Por cada item que se encuentre en dicho conjunto:
         TRELEM.forEach(item => {
             //Crea un TD, le agrega el valor del item y lo asigna al TR creado.
@@ -224,6 +223,8 @@ function LOCALLOAD() {
         if(TRELEM[6] == "TERMINADO") {
             TR_NEW.style.background = 'purple';
             TR_NEW.style.color = 'white';
+
+            LOCALSHIFT(TRELEM,TR_NEW.id);
         }
         //Mostrar días restantes del pedido, al mover el mouse encima de la fila.
 
@@ -261,20 +262,17 @@ function LOCALLOAD() {
         //Atributos del botón
         BUTTON_NEW.id = 'REMOVE'+TR_NEW.id;
         BUTTON_NEW.textContent = "X";
-        BUTTON_NEW.style.position = 'absolute';
-        BUTTON_NEW.style.display = 'flex';
         BUTTON_NEW.style.fontWeight = '800';
-        BUTTON_NEW.style.alignItems = 'center';
-        BUTTON_NEW.style.left = '97%';
         BUTTON_NEW.style.borderRadius = '50%';
-        BUTTON_NEW.style.width = '2%';
+        BUTTON_NEW.style.width = '40%';
         BUTTON_NEW.style.height = '25px';
         BUTTON_NEW.style.background = 'red';
         BUTTON_NEW.style.border = '2px solid lightcoral';
         BUTTON_NEW.style.borderBottomColor= 'darkred';
         BUTTON_NEW.style.borderRightColor= 'darkred';
         BUTTON_NEW.style.color = 'white';
-        TR_NEW.appendChild(BUTTON_NEW);
+        BUTTON_NEW.style.margin = '0% 5%';
+        document.getElementById('TR'+TR_NEW.id+'-TD9').appendChild(BUTTON_NEW);
 
         //BOTÓN 2 (Verificar). Solo aparece si el contenido en item N°6 no dice TERMINADO:
         if(TRELEM[6] != "TERMINADO") {
@@ -296,20 +294,30 @@ function LOCALLOAD() {
             });
             BUTTON2_NEW.id = 'FINISH'+TR_NEW.id;
             BUTTON2_NEW.textContent = "✓";
-            BUTTON2_NEW.style.position = 'absolute';
-            BUTTON2_NEW.style.display = 'flex';
             BUTTON2_NEW.style.fontWeight = '800';
-            BUTTON2_NEW.style.alignItems = 'center';
-            BUTTON2_NEW.style.left = '94.5%';
             BUTTON2_NEW.style.borderRadius = '50%';
-            BUTTON2_NEW.style.width = '2%';
+            BUTTON2_NEW.style.width = '40%';
             BUTTON2_NEW.style.height = '25px';
             BUTTON2_NEW.style.background = 'green';
             BUTTON2_NEW.style.border = '2px solid lightgreen';
             BUTTON2_NEW.style.borderBottomColor= 'rgb(5, 43, 5)';
             BUTTON2_NEW.style.borderRightColor= 'rgb(5, 43, 5)';
             BUTTON2_NEW.style.color = 'white';
-            TR_NEW.appendChild(BUTTON2_NEW);
+            BUTTON2_NEW.style.margin = '0% 5%';
+            document.getElementById('TR'+TR_NEW.id+'-TD9').appendChild(BUTTON2_NEW);
         }
     });
+}
+
+function LOCALSHIFT(element1,element2) {
+    //Carga todo el contenido de TRINFO, guardado en localStorage, y lo guarda en una variable (let TRINFO).
+    let TRINFO = JSON.parse(localStorage.getItem('TRINFO')) || [];
+    //                                                     ¯¯¯¯¯¯¯ Si lo anterior no devuelve nada, devuelve el valor [] (Un array vacío).
+    //De todo ese contenido solo elije uno en específico, el del conjunto que está cargando justo ahora.
+    //Ese conjunto se va a otra variable (TRELEM).
+    let TRELEM = element1;
+    //Borra el conjunto de su posición, y lo agrega de nuevo desde el principio.
+    TRINFO.splice(element2,1);
+    TRINFO.unshift(TRELEM);
+    localStorage.setItem('TRINFO',JSON.stringify(TRINFO));
 }

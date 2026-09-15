@@ -18,16 +18,16 @@ body {
 #BODYCONTENT {margin-top: 10%;}
 .TITLE {display: flex; justify-self: right; margin: 50px;}
     .IMG1 {width: 10%; position: absolute; justify-self: left; left: 6%; top: 3vw;}
-    .CLOCKBOX {position: absolute; left: 88%;}
+    .CLOCKBOX {position: absolute; right: 4vw;}
     #CLOCK {font-size: 100%; font-style: oblique; font-weight: bold; color: var(--COLOR2);}
 
-#SEC-INPUT {margin: 1% 0%;}
-    .INPUT {width: 170px; height: 20px;}
-    #INPUT3 {width: 7.1%;}
+#SEC-INPUT {margin: 2% 0%;}
+    .INPUT {width: 170px; height: 20px; @media (max-width: 700px) {margin: 1% 8%; width: 400px; height: 30px; font-size: x-large;}}
+    #INPUT3 {width: 7.1%; @media (max-width: 700px) {width: 100px;}}
     #INPUT4 {background: transparent; color: var(--COLOR2); width: 6%; border: 2px solid var(--COLOR2);}
-    #INPUT6 {width: 2%}
-    #INPUT8 {width: 6.5%}
-    #INPUT9 {width: 5%;}
+    #INPUT6 {width: 2%; @media (max-width: 700px) {width: 100px;}}
+    #INPUT8 {width: 6.5%; @media (max-width: 700px) {width: 100px;}}
+    #INPUT9 {width: 5%; @media (max-width: 700px) {width: 100px;}}
     #SUBMIT {
         background: green;
         border: 2px solid lightgreen;
@@ -39,6 +39,7 @@ body {
         font-weight: bolder;
         font-style: oblique;
     }
+    #FILTER {@media (max-width: 700px) {margin: 3% 8%;}}
     #LEYEND {display: flex; justify-content: center;}
         .LEYEND-SYMBOL {font-weight: 900;}
         .LEYEND-P {padding: 0% 2% 0.5% 0%; font-weight: 900; font-style: oblique;}
