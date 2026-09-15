@@ -22,12 +22,12 @@ body {
     #CLOCK {font-size: 100%; font-style: oblique; font-weight: bold; color: var(--COLOR2);}
 
 #SEC-INPUT {margin: 2% 0%;}
-    .INPUT {width: 170px; height: 20px; @media (max-width: 700px) {margin: 1% 8%; width: 400px; height: 30px; font-size: x-large;}}
-    #INPUT3 {width: 7.1%; @media (max-width: 700px) {width: 100px;}}
+    .INPUT {width: 170px; height: 20px; @media (max-width: 700px) {margin: 1% 8%; width: 80vw; height: 30px; font-size: x-large;}}
+    #INPUT3 {width: 7.1%; @media (max-width: 700px) {width: 20vw;}}
     #INPUT4 {background: transparent; color: var(--COLOR2); width: 6%; border: 2px solid var(--COLOR2);}
-    #INPUT6 {width: 2%; @media (max-width: 700px) {width: 100px;}}
-    #INPUT8 {width: 6.5%; @media (max-width: 700px) {width: 100px;}}
-    #INPUT9 {width: 5%; @media (max-width: 700px) {width: 100px;}}
+    #INPUT6 {width: 2%; @media (max-width: 700px) {width: 20vw;}}
+    #INPUT8 {width: 6.5%; @media (max-width: 700px) {width: 20vw;}}
+    #INPUT9 {width: 5%; @media (max-width: 700px) {width: 20vw;}}
     #SUBMIT {
         background: green;
         border: 2px solid lightgreen;
